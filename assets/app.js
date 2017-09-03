@@ -11,5 +11,10 @@ $(function() {
       val = "null";
     $('code', $('pre.val', $container)).html( ($.isArray(val) ? JSON.stringify(val) : "\"" + val.replace('"', '\\"') + "\"") );
     $('code', $('pre.items', $container)).html(JSON.stringify($element.tagsinput('items')));
+  
+console.log($element.val())
+
   }).trigger('change');
+
+
 });

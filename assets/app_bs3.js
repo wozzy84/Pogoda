@@ -21,7 +21,7 @@ cities.initialize();
 /**
  * Typeahead
  */
-var elt = $('.example_typeahead > > input');
+var elt = $('.wpisz_miasta > > input');
 elt.tagsinput({
   typeaheadjs: {
     name: 'citynames',
@@ -31,65 +31,3 @@ elt.tagsinput({
   }
 });
 
-/**
- * Objects as tags
- */
-elt = $('.example_objects_as_tags > > input');
-elt.tagsinput({
-  itemValue: 'value',
-  itemText: 'text',
-  typeaheadjs: {
-    name: 'cities',
-    displayKey: 'text',
-    source: cities.ttAdapter()
-  }
-});
-
-elt.tagsinput('add', { "value": 1 , "text": "Amsterdam"   , "continent": "Europe"    });
-elt.tagsinput('add', { "value": 4 , "text": "Washington"  , "continent": "America"   });
-elt.tagsinput('add', { "value": 7 , "text": "Sydney"      , "continent": "Australia" });
-elt.tagsinput('add', { "value": 10, "text": "Beijing"     , "continent": "Asia"      });
-elt.tagsinput('add', { "value": 13, "text": "Cairo"       , "continent": "Africa"    });
-
-/**
- * Categorizing tags
- */
-elt = $('.example_tagclass > > input');
-elt.tagsinput({
-  tagClass: function(item) {
-    switch (item.continent) {
-      case 'Europe'   : return 'label label-primary';
-      case 'America'  : return 'label label-danger label-important';
-      case 'Australia': return 'label label-success';
-      case 'Africa'   : return 'label label-default';
-      case 'Asia'     : return 'label label-warning';
-    }
-  },
-  itemValue: 'value',
-  itemText: 'text',
-  // typeaheadjs: {
-  //   name: 'cities',
-  //   displayKey: 'text',
-  //   source: cities.ttAdapter()
-  // }
-  typeaheadjs: [
-  {
-      hint: true,
-     highlight: true,
-     minLength: 2
-  },
-   {
-      name: 'cities',
-       displayKey: 'text',
-       source: cities.ttAdapter()
-   }
-  ]
-});
-elt.tagsinput('add', { "value": 1 , "text": "Amsterdam"   , "continent": "Europe"    });
-elt.tagsinput('add', { "value": 4 , "text": "Washington"  , "continent": "America"   });
-elt.tagsinput('add', { "value": 7 , "text": "Sydney"      , "continent": "Australia" });
-elt.tagsinput('add', { "value": 10, "text": "Beijing"     , "continent": "Asia"      });
-elt.tagsinput('add', { "value": 13, "text": "Cairo"       , "continent": "Africa"    });
-
-// HACK: overrule hardcoded display inline-block of typeahead.js
-$(".twitter-typeahead").css('display', 'inline');
