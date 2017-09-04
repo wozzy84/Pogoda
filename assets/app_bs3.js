@@ -18,9 +18,7 @@ var cities = new Bloodhound({
 });
 cities.initialize();
 
-/**
- * Typeahead
- */
+
 var elt = $('.wpisz_miasta > > input');
 elt.tagsinput({
   typeaheadjs: {

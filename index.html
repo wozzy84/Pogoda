@@ -55,7 +55,7 @@
 
 
           <div class="bs-example">
-            <input type="text" value="Amsterdam,Washington" />  
+            <input type="text" value="Amsterdam,Washington,Warszawa" />  
           </div>
           
       <br>
@@ -73,14 +73,14 @@
                     <li class="list-group-item">
                         Wykres temperatury
                         <div class="material-switch pull-right">
-                            <input id="someSwitchOptionSuccess" name="someSwitchOption001" type="checkbox"/>
+                            <input id="someSwitchOptionSuccess" name="someSwitchOption001" type="checkbox" checked disabled="" />
                             <label for="someSwitchOptionSuccess" class="label-success"></label>
                         </div>
                     </li>
                     <li class="list-group-item">
                         Wykres ciśnienia  
                         <div class="material-switch pull-right">
-                            <input id="someSwitchOptionInfo" name="someSwitchOption001" type="checkbox">
+                            <input id="someSwitchOptionInfo" name="someSwitchOption001" type="checkbox" disabled="">
                             <label for="someSwitchOptionInfo" class="label-success"></label>
                         </div>
                     
@@ -94,7 +94,8 @@
 
 <br> 
         <div class = "container">
-        <img src ="http://127.0.0.1:3000/temperaturePlot?cities=Koszalin,Łódź,Kraków" class="img-thumbnail" id = "temperatura">
+        <h4 id ="miastaTekst"> Wykres temperatury dla miast: <span>Amsterdam, Waszyngton, Warszawa</span></h4>
+        <img src ="http://127.0.0.1:3000/temperaturePlot?cities=Amsterdam,Washington,Warszawa" class="img-thumbnail" id = "temperatura">
         </div>
 
       
