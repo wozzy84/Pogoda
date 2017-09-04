@@ -43,21 +43,63 @@
     <div class="container">
       <section id="examples">
         <div class="page-header">
-          <h2>Examples</h2>
+          <h2>Pogoda </h2>
+          <h3>to zawsze dobry temat do dyskusji</h3>
+          <h4>Zaskocz swojego interlokutora najbardziej aktualnymi danymi z różnych zakątków świata</h4>
         </div>
 
 
         <div class="example wpisz_miasta">
-          <h3>Typeahead</h3>
-          Typeahead is not included in Bootstrap 3, so you'll have to include your own typeahead library. I'd recommed <a href="http://twitter.github.io/typeahead.js/">typeahead.js</a>. An example of using this is shown below.
+          <h3>Miasta</h3>
+          W pasku poniżej wpisz nazwy miast, z których dane chesz porównać.
+
 
           <div class="bs-example">
             <input type="text" value="Amsterdam,Washington" />  
+          </div>
+          
+      <br>
+
+          <div class="container">
+     <div class="row ">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-4">
+            <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading">Wybierz rodzaj wykresu</div>
+            
+                <!-- List group -->
+                <ul class="list-group">
+                
+                    <li class="list-group-item">
+                        Wykres temperatury
+                        <div class="material-switch pull-right">
+                            <input id="someSwitchOptionSuccess" name="someSwitchOption001" type="checkbox"/>
+                            <label for="someSwitchOptionSuccess" class="label-success"></label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        Wykres ciśnienia  
+                        <div class="material-switch pull-right">
+                            <input id="someSwitchOptionInfo" name="someSwitchOption001" type="checkbox">
+                            <label for="someSwitchOptionInfo" class="label-success"></label>
+                        </div>
+                    
+                    </li>
+                </ul>
+            </div>  <button type="button" class="btn btn-primary" id = "generuj">Generuj</button>         
         </div>
+        </div>
+
+
+
+<br> 
+        <div class = "container">
+        <img src ="http://127.0.0.1:3000/temperaturePlot?cities=Koszalin,Łódź,Kraków" class="img-thumbnail" id = "temperatura">
         </div>
 
       
 
+      
       
   
   
