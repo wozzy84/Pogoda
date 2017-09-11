@@ -26,7 +26,7 @@ $("#someSwitchOptionSuccess").on('change', function(event){
 
 $("#generuj").on('click', function(event)
 { $("#temperatura").attr('src','http://127.0.0.1:3000/temperaturePlot?cities='+miasta);
- $('#miastaTekst span').text(miasta);
+ $('#miastaTekst span').text(miasta.replace(/,/g, ", "));
 
 })
 
