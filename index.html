@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>Wykresy</title>
-   
+
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
@@ -14,102 +15,102 @@
 
 
 
-  </head>
-  <body>
+</head>
+
+<body>
     <div id="fb-root"></div>
     <div class="jumbotron">
-      <div class="container">
-        <h1>Generator wykresów</h1>
-        <p>Stwórz własny wykres prognozy pogody. Porównaj wykresy prognozy dla rożnych miast.</p>
-        <p>
-            <a class="btn btn-default" role="button" href="https://github.com/wozzy84/Pogoda">Code on Github</a>           
-        </p>
-        <p>
-          <ul class="list-inline">
-            
+        <div class="container">
+            <h1>Generator wykresów</h1>
+            <p>Stwórz własny wykres prognozy pogody. Porównaj wykresy prognozy dla rożnych miast.</p>
+            <p>
+                <a class="btn btn-default" role="button" href="https://github.com/wozzy84/Pogoda">Code on Github</a>
+            </p>
+            <p>
+                <ul class="list-inline">
 
-            <li>
-              <iframe src="//ghbtns.com/github-btn.html?user=wozzy84&repo=Pogoda&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="80" height="20"></iframe>
-            </li>
 
-            <li>
-              <iframe src="//ghbtns.com/github-btn.html?user=wozzy84&repo=Pogoda&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
-            </li>
-                   
-          </ul>
-        </p>
-      </div>
+                    <li>
+                        <iframe src="//ghbtns.com/github-btn.html?user=wozzy84&repo=Pogoda&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="80" height="20"></iframe>
+                    </li>
+
+                    <li>
+                        <iframe src="//ghbtns.com/github-btn.html?user=wozzy84&repo=Pogoda&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+                    </li>
+
+                </ul>
+            </p>
+        </div>
     </div>
     <div class="container">
-      <section id="examples">
-        <div class="page-header">
-          <h2>Pogoda </h2>
-          <h3>to zawsze dobry temat do dyskusji</h3>
-          <h4>Zaskocz swojego interlokutora najbardziej aktualnymi danymi z różnych zakątków świata</h4>
-        </div>
+        <section id="examples">
+            <div class="page-header">
+                <h2>Pogoda </h2>
+                <h3>to zawsze dobry temat do dyskusji</h3>
+                <h4>Zaskocz swojego interlokutora najbardziej aktualnymi danymi z różnych zakątków świata</h4>
+            </div>
 
 
-        <div class="example wpisz_miasta">
-          <h3>Miasta</h3>
-          W pasku poniżej wpisz nazwy miast, z których dane chesz porównać.
+            <div class="example wpisz_miasta">
+                <h3>Miasta</h3>
+                W pasku poniżej wpisz nazwy miast, z których dane chesz porównać.
 
 
-          <div class="bs-example">
-            <input type="text" value="Amsterdam,Washington,Warszawa" />  
-          </div>
-          
-      <br>
+                <div class="bs-example">
+                    <input type="text" value="Amsterdam,Washington,Warszawa" />
+                </div>
 
-          <div class="container">
-     <div class="row ">
-        <div class="col-xs-12 col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-4">
-            <div class="panel panel-default">
-                <!-- Default panel contents -->
-                <div class="panel-heading">Wybierz rodzaj wykresu</div>
-            
-                <!-- List group -->
-                <ul class="list-group">
-                
-                    <li class="list-group-item">
-                        Wykres temperatury
-                        <div class="material-switch pull-right">
-                            <input id="someSwitchOptionSuccess" name="someSwitchOption001" type="checkbox" checked disabled="" />
-                            <label for="someSwitchOptionSuccess" class="label-success"></label>
+                <br>
+
+                <div class="container">
+                    <div class="row ">
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-4">
+                            <div class="panel panel-default">
+                                <!-- Default panel contents -->
+                                <div class="panel-heading">Wybierz rodzaj wykresu</div>
+
+                                <!-- List group -->
+                                <ul class="list-group">
+
+                                    <li class="list-group-item">
+                                        Wykres temperatury
+                                        <div class="material-switch pull-right">
+                                            <input id="someSwitchOptionSuccess" name="someSwitchOption001" type="checkbox" checked disabled="" />
+                                            <label for="someSwitchOptionSuccess" class="label-success"></label>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        Wykres ciśnienia
+                                        <div class="material-switch pull-right">
+                                            <input id="someSwitchOptionInfo" name="someSwitchOption001" type="checkbox" disabled="">
+                                            <label for="someSwitchOptionInfo" class="label-success"></label>
+                                        </div>
+
+                                    </li>
+                                </ul>
+                            </div> <button type="button" class="btn btn-primary" id="generuj">Generuj</button>
                         </div>
-                    </li>
-                    <li class="list-group-item">
-                        Wykres ciśnienia  
-                        <div class="material-switch pull-right">
-                            <input id="someSwitchOptionInfo" name="someSwitchOption001" type="checkbox" disabled="">
-                            <label for="someSwitchOptionInfo" class="label-success"></label>
-                        </div>
-                    
-                    </li>
-                </ul>
-            </div>  <button type="button" class="btn btn-primary" id = "generuj">Generuj</button>         
-        </div>
-        </div>
+                    </div>
 
 
 
-<br> 
-        <div class = "container">
-        <h4 id ="miastaTekst"> Wykres temperatury dla miast: <span>Amsterdam, Waszyngton, Warszawa</span></h4>
-        <img src ="http://127.0.0.1:3000/temperaturePlot?cities=Amsterdam,Washington,Warszawa" class="img-thumbnail" id = "temperatura">
-        </div>
+                    <br>
+                    <div class="container">
+                        <h4 id="miastaTekst"> Wykres temperatury dla miast: <span>Amsterdam, Waszyngton, Warszawa</span></h4>
+                        <img src="http://127.0.0.1:3000/temperaturePlot?cities=Amsterdam,Washington,Warszawa" class="img-thumbnail" id="temperatura">
+                    </div>
 
-      
 
-      
-      
-  
-  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
 
-    <script src="../dist/bootstrap-tagsinput.min.js"></script>
-    <script src="assets/app.js"></script>
-    <script src="assets/app_bs3.js"></script>
-  </body>
+
+
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
+
+                    <script src="../dist/bootstrap-tagsinput.min.js"></script>
+                    <script src="assets/app.js"></script>
+                    <script src="assets/app_bs3.js"></script>
+</body>
+
 </html>
