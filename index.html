@@ -75,15 +75,15 @@
                                     <li class="list-group-item">
                                         Wykres temperatury
                                         <div class="material-switch pull-right">
-                                            <input id="someSwitchOptionSuccess" name="someSwitchOption001" type="checkbox" checked disabled="" />
-                                            <label for="someSwitchOptionSuccess" class="label-success"></label>
+                                            <input id="tempSwitchOptionSuccess" name="tempSwitchOption001" type="checkbox">
+                                            <label for="tempSwitchOptionSuccess" class="label-success"></label>
                                         </div>
                                     </li>
                                     <li class="list-group-item">
                                         Wykres ciśnienia
                                         <div class="material-switch pull-right">
-                                            <input id="someSwitchOptionInfo" name="someSwitchOption001" type="checkbox" disabled="">
-                                            <label for="someSwitchOptionInfo" class="label-success"></label>
+                                            <input id="pressureSwitchOptionInfo" name="pressureSwitchOption001" type="checkbox">
+                                            <label for="pressureSwitchOptionInfo" class="label-success"></label>
                                         </div>
 
                                     </li>
@@ -95,10 +95,17 @@
 
 
                     <br>
-                    <div class="container">
+                    <div class="container" id ="wykresTemperatury">
                         <h4 id="miastaTekst"> Wykres temperatury dla miast: <span>Amsterdam, Waszyngton, Warszawa</span></h4>
                         <img src="http://127.0.0.1:3000/temperaturePlot?cities=Amsterdam,Washington,Warszawa" class="img-thumbnail" id="temperatura">
                     </div>
+
+                    <br>
+                    <div class="container" id = "wykresCisnienia">
+                        <h4 id="miastaTekst"> Wykres ciśnienia dla miast: <span>Amsterdam, Waszyngton, Warszawa</span></h4>
+                        <img src="http://127.0.0.1:3000/pressurePlot?cities=Amsterdam,Washington,Warszawa" class="img-thumbnail" id="cisnienie">
+                    </div>
+
 
 
 
